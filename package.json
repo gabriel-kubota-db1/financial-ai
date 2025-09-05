@@ -1,0 +1,16 @@
+{
+  "name": "financial-organizer",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:application": "cd application && npm install",
+    "install:backend": "cd backend && npm install",
+    "install:all": "npm install && npm run install:application && npm run install:backend",
+    "dev:application": "cd application && npm start",
+    "dev:backend": "cd backend && npm run dev",
+    "dev": "concurrently \"npm:dev:backend\" \"npm:dev:application\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
